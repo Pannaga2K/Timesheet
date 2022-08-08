@@ -1,0 +1,108 @@
+.app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: #0F0F0F;
+	color: whitesmoke;
+}
+
+.app > h1 {
+	width: fit-content !important;
+	margin: 20px auto;
+}
+
+.app__users {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.app__users > a {
+	margin-left: 60px;
+	margin-bottom: 20px;
+}
+
+.app__usersCard, .app__createUserCard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 225px;
+	height: 250px;
+	background-color: black !important;
+	color: white;
+	border: 1px solid grey;
+}
+
+.app__usersCard {
+	margin-left: 60px;
+	margin-bottom: 20px;
+}
+
+.app__users-metadata {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 20px; 
+	font-size: 17px;
+}
+
+.app__users-metadata > p:nth-child(2) {
+	font-size: 13px;
+	padding-top: 3px;
+}
+
+.app__userName {
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.app__buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.app__buttons > button {
+	width: 100px;
+	padding: 6px;
+	background-color: white;
+	color: black;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+	width: fit-content !important;
+	height: auto;
+	background-color: white;
+}
+
+.app__buttons > button:hover, .app__buttons > button:hover a {
+    transition: 0.4s all linear;
+    background-color: #0f0f0f !important;
+    color: white;
+}
+
+.app__createUser-icon > svg {
+	width: 50px;
+    height: auto;
+}
+
+.app__createUserCard {
+	cursor: pointer;
+}

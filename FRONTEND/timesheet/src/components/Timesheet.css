@@ -1,0 +1,102 @@
+.timesheet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timesheet > h1 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.timesheet__body {
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.timesheet__body > div {
+    width: 100px;
+    padding: 3px;
+}
+
+
+.timesheet__card,
+.timesheet__card-header {
+  width: 130px !important;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: black;
+  margin-bottom: 5px;
+}
+
+.timesheet__card-header > p {
+  width: fit-content;
+  font-size: 12px;
+  padding-bottom: 3px;
+  margin: 10px auto;
+  margin-bottom: 20px;
+}
+
+.timesheet__card-header {
+  flex-direction: column;
+  justify-content: flex-end;
+  /* margin: 10px auto; */
+}
+
+.timesheet__attendance,
+.timesheet__remarks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timesheet__attendance > input,
+.timesheet__remarks > input {
+  display: flex;
+  width: 120px !important;
+  height: 30px;
+  background-color: #0f0f0f;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid grey;
+  color: white;
+  margin-top: 10px;
+}
+
+.timesheet__main {
+  display: flex;
+}
+
+.timesheet__card-header > p {
+  padding-top: 3px;
+}
+
+.timesheet__buttons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.timesheet__buttons > button {
+  width: 100px;
+  height: 50px;
+  font-size: 18px;
+  background-color: #0f0f0f;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.timesheet__buttons > button:hover {
+  transition: all 0.2s linear;
+  background-color: black;
+  color: white;
+}
