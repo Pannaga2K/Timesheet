@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import "./CreateUser.css";
+import "./Login_Create.css";
 import axios from "../axios";
 import { useNavigate } from "react-router-dom";
 
@@ -8,7 +8,8 @@ function CreateUser() {
         username: "",
         email: "",
         phone: "",
-        doj: ""
+        doj: "",
+        password: ""
     });
     const navigate = useNavigate();
 
@@ -22,9 +23,10 @@ function CreateUser() {
     }
 
     const createUser = () => {
-        if(userDetails.username != "" || userDetails.email != "" || userDetails.phone != "" || userDetails.doj != "") {
+        if(userDetails.username != "" || userDetails.email != "" || userDetails.phone != "" || userDetails.doj != "" || userDetails.password != "") {
             axios.post("users/create", {details: userDetails}).then((res) => {
                 console.log(res);
+                sessionStorage.setItem("user", {username: userDetails.username, userId: res.data.userId});
                 navigate('/');
             })
         } else {
@@ -38,10 +40,11 @@ function CreateUser() {
         <div className="createUser" >
             <h1>CREATE USER</h1>
             <div className="createUser__form" >
-                <input type="text" name="username" value={userDetails.username} onChange={(e) => handleInputs(e)} />
-                <input type="text" name="email" value={userDetails.email} onChange={(e) => handleInputs(e)} />
-                <input type="text" name="phone" value={userDetails.phone} onChange={(e) => handleInputs(e)} />
-                <input type="text" name="doj" value={userDetails.doj} onChange={(e) => handleInputs(e)} />
+                <input type="text" name="username" placeholder="Username" value={userDetails.username} onChange={(e) => handleInputs(e)} />
+                <input type="text" name="email" placeholder="Email" value={userDetails.email} onChange={(e) => handleInputs(e)} />
+                <input type="text" name="phone" placeholder="Phone" value={userDetails.phone} onChange={(e) => handleInputs(e)} />
+                <input type="text" name="doj" placeholder="Date Of Join" value={userDetails.doj} onChange={(e) => handleInputs(e)} />
+                <input type="password" name="password" placeholder="Password" value={userDetails.password} onChange={(e) => handleInputs(e)} />
                 <button onClick={() => createUser()} >SUBMIT</button>
             </div>
         </div>

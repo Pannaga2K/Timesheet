@@ -7,9 +7,23 @@
 	color: whitesmoke;
 }
 
-.app > h1 {
+.app > .app__login > h1 {
 	width: fit-content !important;
 	margin: 20px auto;
+}
+
+.app__login {
+	display: flex;
+	color: white;
+	width: 100%;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.app__login > div > a > h2, .app__login > div > h2 {
+	color: white !important;
+	margin-right: 10px;
+	cursor: pointer;
 }
 
 .app__users {
@@ -35,6 +49,15 @@
 	background-color: black !important;
 	color: white;
 	border: 1px solid grey;
+	box-sizing: border-box;
+    box-shadow: rgba(255, 255, 255, 0.06) 0px 2px 4px;
+	transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.app__usersCard:hover {
+	box-shadow: rgba(255, 255, 255, 0.22) 0px 10px 25px;
+    transform: translate3d(0px, -10px, 0px);
 }
 
 .app__usersCard {
