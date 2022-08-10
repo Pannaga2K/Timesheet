@@ -37,8 +37,10 @@ function Users() {
 	return (
 		<div className="app">
 			<div className="app__login" >
-				<h1>TIMESHEET</h1>
-				<div>
+				<div className="app__header" >
+					<h1>TIMESHEET</h1>
+				</div>
+				<div className="app__auth" >
 					{!isLoggedIn ? <Link to="/login" ><h2>LOGIN/SIGNUP</h2></Link> : <h2 onClick={() => logout()} >LOGOUT</h2>}
 				</div>
 			</div>

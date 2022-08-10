@@ -5,6 +5,7 @@
 	justify-content: flex-start;
 	background-color: #0F0F0F;
 	color: whitesmoke;
+	width: 100%;
 }
 
 .app > .app__login > h1 {
@@ -17,7 +18,18 @@
 	color: white;
 	width: 100%;
 	align-items: center;
+	/* justify-content: flex-end; */
+}
+
+.app__header {
+	display: flex;
 	justify-content: flex-end;
+	width: 100%;
+	margin: 10px auto;
+}
+
+.app__auth {
+	margin-left: auto;
 }
 
 .app__login > div > a > h2, .app__login > div > h2 {
